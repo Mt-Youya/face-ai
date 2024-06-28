@@ -23,7 +23,7 @@ function FaceDetection() {
 
     // Initialize the object detector
     async function initializefaceDetector() {
-        const vision = await FilesetResolver.forVisionTasks("/public/")
+        const vision = await FilesetResolver.forVisionTasks("")
         contextRef.current.faceDetector = await FaceDetector.createFromOptions(vision, {
             baseOptions: { modelAssetPath, delegate: "GPU" },
             runningMode: contextRef.current.runningMode,
